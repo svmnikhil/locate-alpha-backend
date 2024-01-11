@@ -3,9 +3,13 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo Installing Maven
-      - apt-get update -y
-      - apt-get install -y maven  # Install Maven if it's not included in the build environment
+      - |
+        if ! type mvn > /dev/null 2>&1; then
+          echo "Maven not found, installing..."
+          yum install -y maven
+        else
+          echo "Maven already installed, version: $(mvn --version)"
+        fi
   build:
     commands:
       - echo Build started on `date`
