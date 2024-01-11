@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Installing Maven
+      - apt-get update -y
+      - apt-get install -y maven  # Install Maven if it's not included in the build environment
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn clean package -DskipTests  # Package the application into a JAR, skipping tests for faster build
+      - echo Build completed on `date`
+  post_build:
+    commands:
+      - echo Build and package completed on `date`
+
+artifacts:
+  files:
+    - target/*.jar  # Replace with the path to your JAR file
+
+cache:
+  paths:
+    - '/root/.m2/**/*'  # Caching Maven dependencies to speed up future builds
