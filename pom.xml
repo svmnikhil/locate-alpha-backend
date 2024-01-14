@@ -50,16 +50,29 @@
 			<groupId>org.ugeojson</groupId>
 			<artifactId>ugeojson-parser</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/ugeojson-parser/0.0.1-SNAPSHOT/ugeojson-parser-0.0.1-SNAPSHOT.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.ugeojson</groupId>
 			<artifactId>ugeojson-builder</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/ugeojson-builder/0.0.1-SNAPSHOT/ugeojson-builder-0.0.1-SNAPSHOT.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.ugeojson</groupId>
 			<artifactId>ugeojson-math</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/ugeojson-math/0.0.1-SNAPSHOT/ugeojson-math-0.0.1-SNAPSHOT.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.ugeojson</groupId>
+			<artifactId>ugeojson-model</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/ugeojson-model/0.0.1-SNAPSHOT/ugeojson-model-0.0.1-SNAPSHOT.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
