@@ -12,13 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/neighbourhoods")
 public class NeighbourhoodController {
 
     @Autowired
     private NeighbourhoodService neighbourhoodService;
 
-    @GetMapping
+    @GetMapping("/")
+    public String welcomePage() {
+        return "This is the locatealpha backend application!";
+    }
+
+    @GetMapping("/api/neighbourhoods")
     public List<NeighbourhoodDTO> getAllNeighbourhoods() {
         return neighbourhoodService.getAllNeighbourhoods();
     }
